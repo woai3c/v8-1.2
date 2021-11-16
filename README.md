@@ -1,6 +1,7 @@
 ## 构建 v8
 ```
 mkdir -p build
-(cd build && cmake .. -DBUILD_TESTING=ON) # generate project with tests
-cmake --build build                       # add `-j <n>` with cmake >= 3.12
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=debug -DUSE_SNAPSHOT=1
+make
 ```
